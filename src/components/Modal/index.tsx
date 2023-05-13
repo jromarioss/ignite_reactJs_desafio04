@@ -70,9 +70,9 @@ export function Modal() {
 
           <ProductCardsBox>
             {cartItems.map((item) => (
-              <ProductCards>
+              <ProductCards key={item.id}>
                 <ProductCardImage>
-                  <Image src={item.imageUrl} alt="" width={90} height={90} />
+                  <Image src={item.imageUrl} alt={item.name} width={90} height={90} />
                 </ProductCardImage>
                 <ProductCardInfo>
                   <ProductCardTitle>{item.name}</ProductCardTitle>

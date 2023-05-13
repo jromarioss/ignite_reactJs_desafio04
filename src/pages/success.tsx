@@ -28,7 +28,7 @@ export default function Success({ customerName, products }: SuccessProps) {
       <SuccessContainer>
         <ImageArea>
           {products.map((product) => (
-            <ImageContainer>
+            <ImageContainer key={product.name}>
               <Image src={product.images[0]} alt={product.name} width={120} height={110} />
             </ImageContainer>
           ))}
