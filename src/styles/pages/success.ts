@@ -8,10 +8,27 @@ export const SuccessContainer = styled('main', {
   margin: '0 auto',
   height: 656,
 
+  '@media (max-width: 768px)': {
+    justifyContent: 'flex-start',
+  },
+
   h1: {
     fontSize: '$2xl',
     color: '$gray100',
     marginTop: '3rem',
+
+    '@media (max-width: 768px)': {
+      marginTop: '2rem',
+    },
+
+    '@media (max-width: 426px)': {
+      marginTop: '1rem',
+      fontSize: '$lg',
+    },
+
+    '@media (max-width: 320px)': {
+      fontSize: 16,
+    },
   },
 
   p: {
@@ -21,6 +38,20 @@ export const SuccessContainer = styled('main', {
     textAlign: 'center',
     marginTop: '2rem',
     lineHeight: 1.4,
+
+    '@media (max-width: 768px)': {
+      marginTop: '2rem',
+    },
+
+    '@media (max-width: 426px)': {
+      maxWidth: 250,
+      marginTop: '1rem',
+      fontSize: 16,
+    },
+
+    '@media (max-width: 320px)': {
+      fontSize: 12,
+    },
   },
 
   a: {
@@ -30,6 +61,14 @@ export const SuccessContainer = styled('main', {
     color: '$green500',
     textDecoration: 'none',
     fontWeight: 'bold',
+
+    '@media (max-width: 768px)': {
+      marginTop: '4rem',
+    },
+
+    '@media (max-width: 320px)': {
+      fontSize: 14,
+    },
 
     '&:hover': {
       color: '$green300',
@@ -43,6 +82,10 @@ export const ImageArea = styled('div', {
   flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'center',
+
+  '@media (max-width: 426px)': {
+    width: '100%',
+  },
 })
 
 export const ImageContainer = styled('div', {
@@ -59,8 +102,14 @@ export const ImageContainer = styled('div', {
   justifyContent: 'center',
   marginRight: -35,
   zIndex: 1,
+
+  '@media (max-width: 426px)': {
+    maxWidth: 'none',
+    width: 100,
+    height: 100,
+  },
   
   img: {
     objectFit: 'cover',
   }
-});
+})
